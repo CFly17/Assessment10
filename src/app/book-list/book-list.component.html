@@ -1,0 +1,26 @@
+<h2>Book List</h2>
+
+<div *ngFor = "let b of bookList">
+    <h4>Title: {{b.title}}</h4>
+    <p>Author: {{b.author}}</p>
+    <p>Year: {{b.publicationYear}}</p>
+    <button (click)="DeleteBook(b)">Delete {{b.title}}</button>
+</div>
+
+<br>
+<p>---------------------------------------</p>
+<div>
+    <h2>Add new book here</h2>
+
+        <p>Title: </p>
+        <input type="text" id="title"> 
+
+        <p>Author: </p>
+        <input type="text" id="author"> 
+
+        <p>Year: </p>
+        <input type="number" id="publicationYear"> 
+
+    <button (click)="AddBook()">Add Book</button>
+
+</div>
